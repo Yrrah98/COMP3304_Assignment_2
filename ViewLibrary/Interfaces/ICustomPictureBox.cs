@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ViewLibrary.Interfaces
 {
-    public interface IDisplayView
+    public interface ICustomPictureBox
     {
-        void Loaded();
+
+        String imgKey { get; }
     }
 }

@@ -11,13 +11,21 @@ namespace ModelLibrary.Interfaces
     public interface IImageData
     {
 
+        void SaveImage();
+
         Image image { get; }
 
         void AddImage(PictureBox pPb,Image pImg);
 
         void ThumbImage();
 
-        void FlipImage();
+        void RotateCW();
+
+        void RotateACW();
+
+        void FlipImageH();
+
+        void FlipImageV();
 
         void DisplaySize(Size pSize);
     }

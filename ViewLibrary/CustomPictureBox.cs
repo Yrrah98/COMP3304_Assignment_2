@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using ViewLibrary.Interfaces;
 
 namespace ViewLibrary
 {
@@ -13,12 +14,21 @@ namespace ViewLibrary
     // CODE REFERENCE NAME: Lankymart
     // CODE REFERENCE ACCESSED: 13/04/2020
     // AVAILABLE ONLINE
-    public class CustomPictureBox : PictureBox
+    public class CustomPictureBox : PictureBox, ICustomPictureBox
     {
+        /// <summary>
+        /// PROPERTY: imgKey, a property which grants access to a string
+        /// </summary>
+        public String imgKey { get; private set; }
 
-        public CustomPictureBox()
+        /// <summary>
+        /// CONSTRUCTOR for CustomPictureBox class
+        /// </summary>
+        /// <param name="pUid"> the key of the IImageData the image belongs to </param>
+        public CustomPictureBox(String pUid)
         {
-
+            // SET the imgKey in this class to the image key passed in
+            imgKey = pUid;
         }
 
         protected override void OnPaint(PaintEventArgs pe)

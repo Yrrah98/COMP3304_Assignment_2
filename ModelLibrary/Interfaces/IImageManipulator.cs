@@ -14,8 +14,10 @@ namespace ModelLibrary.Interfaces
 
         Image ResizeImage(Image pImg, Size pSize);
 
-        Image FlipHImage(Image pImg);
+        Image RotateImage(Image pImg, float pRtate);
 
-        Image FlipVImage(Image pImg);
+        Image FlipHImage(Image pImg, bool flip);
+
+        Image FlipVImage(Image pImg, bool flip);
     }
 }
